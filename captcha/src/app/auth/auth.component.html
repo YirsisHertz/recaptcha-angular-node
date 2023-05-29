@@ -1,0 +1,22 @@
+<form (ngSubmit)="login()" [formGroup]="authForm" autocomplete="off">
+  <div>
+    <label>Email</label>
+    <input formControlName="email" type="email" name="email" id="email" />
+  </div>
+  <div>
+    <label>Password</label>
+    <input
+      formControlName="password"
+      type="password"
+      name="password"
+      id="password"
+    />
+  </div>
+  <div>
+    <button type="submit">Login</button>
+  </div>
+</form>
+
+<pre>
+  {{ authForm.value | json }}
+</pre>
